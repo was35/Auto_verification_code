@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="icons/icon128.png" alt="logo" class="logo">
+            <h1>自动验证码同步</h1>
+        </header>
+
+        <div id="login-view" class="view">
+            <p class="subtitle">请输入凭据以同步验证码。</p>
+            <div class="input-group">
+                <input type="text" id="username" placeholder="用户名">
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="密码">
+            </div>
+            <div class="input-group hidden">
+                <input type="text" id="login-server" placeholder="服务器地址 (如 http://1.2.3.4:8000)">
+            </div>
+            <button id="login-btn">登录</button>
+            <div class="footer-links">
+                <a href="#" id="show-register">注册新账号</a>
+            </div>
+        </div>
+
+        <div id="register-view" class="view hidden">
+            <p class="subtitle">创建一个新账号。</p>
+            <div class="input-group">
+                <input type="text" id="reg-username" placeholder="选择用户名">
+            </div>
+            <div class="input-group">
+                <input type="password" id="reg-password" placeholder="选择密码">
+            </div>
+            <div class="input-group hidden">
+                <input type="text" id="reg-server" placeholder="服务器地址 (如 http://1.2.3.4:8000)">
+            </div>
+            <button id="register-btn">注册</button>
+            <div class="footer-links">
+                <a href="#" id="show-login">返回登录</a>
+            </div>
+        </div>
+
+        <div id="main-view" class="view hidden">
+            <div class="status-card">
+                <div style="display: flex; align-items: center;">
+                    <div class="status-indicator" id="status-dot"></div>
+                    <span id="status-text">未连接</span>
+                </div>
+                <button id="toggle-conn-btn" class="mini-btn">断开连接</button>
+            </div>
+            <p class="user-info">当前登录: <strong id="current-user">-</strong></p>
+            <div class="info-group">
+                <label>API 接口 (用于手机):</label>
+                <code id="api-url">加载中...</code>
+                <button class="copy-btn" id="copy-api-btn">复制</button>
+            </div>
+            <button id="logout-btn" class="secondary">退出登录</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+        </div>
+        <p id="msg" class="message"></p>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

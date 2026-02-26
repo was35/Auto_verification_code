@@ -1,0 +1,7 @@
+promb.md
+server/verification_code.db
+server/.env
+*.pyc
+__pycache__/
+node_modules/
+.DS_Store

@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --primary: #4A90E2;
+    --primary-hover: #357ABD;
+    --bg: #FFFFFF;
+    --text: #333333;
+    --text-light: #666666;
+    --border: #E1E4E8;
+    --success: #4CAF50;
+    --error: #F44336;
+}
+
+body {
+    width: 320px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+.container {
+    padding: 24px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--primary);
+}
+
+.subtitle {
+    font-size: 13px;
+    color: var(--text-light);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--primary-hover);
+}
+
+button.secondary {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 1px solid var(--border);
+    margin-top: 10px;
+}
+
+button.secondary:hover {
+    background-color: #F8F9FA;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.footer-links {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.footer-links a {
+    font-size: 12px;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.status-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: #F8F9FA;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: var(--error);
+}
+
+.status-indicator.on {
+    background: var(--success);
+}
+
+.user-info {
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.info-group {
+    background: #f1f3f5;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.info-group label {
+    display: block;
+    font-size: 11px;
+    color: var(--text-light);
+    margin-bottom: 4px;
+}
+
+.info-group code {
+    display: block;
+    font-size: 11px;
+    word-break: break-all;
+    margin-bottom: 8px;
+    color: #495057;
+}
+
+.copy-btn,
+.mini-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+    width: auto;
+    margin: 0;
+}
+
+.mini-btn.off {
+    background-color: var(--success);
+}
+
+.mini-btn.off:hover {
+    background-color: #45a049;
+}
+
+.mini-btn.on {
+    background-color: var(--error);
+}
+
+.mini-btn.on:hover {
+    background-color: #d32f2f;
+}
+
+.message {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.message.success {
+    color: var(--success);
+}
+
+.message.error {
+    color: var(--error);
+}

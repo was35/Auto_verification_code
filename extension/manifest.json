@@ -1,0 +1,40 @@
+{
+    "manifest_version": 3,
+    "name": "自动验证码同步",
+    "version": "1.0",
+    "description": "自动接收并填写从手机发送的验证码。",
+    "permissions": [
+        "storage",
+        "clipboardWrite",
+        "activeTab",
+        "scripting",
+        "notifications",
+        "alarms"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/icon128.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "content.css"
+            ]
+        }
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "icons": {
+        "128": "icons/icon128.png"
+    }
+}
